@@ -9,10 +9,8 @@ import React from 'react'
 import { NextSeo } from 'next-seo'
 import { Container, Box } from '@mui/material'
 import useTranslation from 'next-translate/useTranslation'
-import { useAccount } from 'wagmi'
-import SignInWithWallet from 'components/state/SignInWithWallet'
-import Logged from 'components/state/Logged'
-
+// import SignInWithWallet from 'components/state/SignInWithWallet'
+// import Logged from 'components/state/Logged'
 /*
 |--------------------------------------------------------------------------
 | Component
@@ -20,17 +18,17 @@ import Logged from 'components/state/Logged'
 */
 const Home: NextPage = () => {
 	const { t } = useTranslation()
-	const ref = useAccount()
-	const [isConnected, setIsConnected] = React.useState(false)
-
-	React.useEffect(() => setIsConnected(ref.isConnected), [ref])
+	// const { open } = useWeb3Modal()
+	// const [isConnected, setIsConnected] = React.useState(false)
+	// React.useEffect(() => setIsConnected(ref.isConnected), [ref])
 
 	return (
 		<React.Fragment>
 			<NextSeo title={t('index:seo.title')} description={t('index:seo.description')} />
 			<Container>
 				<Box height={'100%'} display={'flex'} flexDirection={'column'} justifyContent={'center'}>
-					{!isConnected ? <SignInWithWallet /> : <Logged />}
+					<w3m-button />
+					<w3m-network-button />
 				</Box>
 			</Container>
 		</React.Fragment>

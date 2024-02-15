@@ -48,6 +48,8 @@ export const AppLayoutHeader: React.FC<AppLayoutHeaderProps> = () => {
 			>
 				{t('common:header.starton-tagline')}
 			</Typography>
+			<w3m-button />
+			{/* <w3m-network-button /> */}
 		</Header>
 	)
 }
