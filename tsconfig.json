@@ -1,7 +1,11 @@
 {
 	"compilerOptions": {
 		"target": "es5",
-		"lib": ["dom", "dom.iterable", "esnext"],
+		"lib": [
+			"dom",
+			"dom.iterable",
+			"esnext"
+		],
 		"allowJs": true,
 		"skipLibCheck": true,
 		"strict": true,
@@ -14,8 +18,20 @@
 		"isolatedModules": true,
 		"jsx": "preserve",
 		"incremental": true,
-		"baseUrl": "src/"
+		"baseUrl": "src/",
+		"paths": {
+			"@/*": [
+				"./*"
+			]
+		}
 	},
-	"include": ["node_modules/@starton/ui-nextjs/build/mui-types.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
-	"exclude": ["node_modules"]
+	"include": [
+		"node_modules/@starton/ui-nextjs/build/mui-types.d.ts",
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx"
+	],
+	"exclude": [
+		"node_modules"
+	]
 }

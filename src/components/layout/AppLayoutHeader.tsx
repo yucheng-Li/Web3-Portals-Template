@@ -9,6 +9,7 @@ import { Container, ContainerProps, styled, Typography } from '@mui/material'
 import { StartonType } from '@starton/react-ui-iconography'
 import { Theme } from '@mui/system'
 import useTranslation from 'next-translate/useTranslation'
+import Link from 'next/link'
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +49,9 @@ export const AppLayoutHeader: React.FC<AppLayoutHeaderProps> = () => {
 			>
 				{t('common:header.starton-tagline')}
 			</Typography>
+			<Link href={'/home'} rel="noreferrer" passHref>
+				Home
+			</Link>
 			<w3m-button />
 			{/* <w3m-network-button /> */}
 		</Header>
