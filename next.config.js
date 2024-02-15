@@ -12,6 +12,7 @@ const nextConfig = {
 	swcMinify: true,
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	webpack: (config, { isServer, webpack }) => {
+		config.externals.push('pino-pretty', 'lokijs', 'encoding')
 		return config
 	},
 }
